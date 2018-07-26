@@ -1,8 +1,8 @@
 #include "crack.hpp"
-string model_file   = "../model/deploy_crack.prototxt";
-string trained_file = "../model/caffe_alexnet_train_iter_450000.caffemodel";
-string mean_file    = "../model/crack_mean.binaryproto";
-string label_file   = "../model/labels.txt";
+string model_file   = "/home/u16364/cpp_crack_app/train_models/deploy_crack.prototxt";
+string trained_file = "/home/u16364/cpp_crack_app/train_models/caffe_alexnet64_train_iter_90.caffemodel";
+string mean_file    = "/home/u16364/cpp_crack_app/train_models/crack_mean.binaryproto";
+string label_file   = "/home/u16364/cpp_crack_app/train_models/labels.txt";
 
 /**
   * Detect the Contour in the binary Image
@@ -556,10 +556,12 @@ void Crack::cnn_predict(Mat src,Mat binObj,vector<vector<Point> > pcontour,strin
 				cv::rectangle(dest1, t_boundingRect, Scalar(0,0,255), 1.5);
 				c_count++;
 			}
+#if 0
 			if(DEBUG==1 || DEBUG ==2){
 				cv::imshow("Crack Contours", dest1);
 				waitKey(1);
 			}
+#endif
 	}
 	if(DEBUG==1 || DEBUG ==2)
 		std::cout << "Total Contours: "<<c_count << '\n';
