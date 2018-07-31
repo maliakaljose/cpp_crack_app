@@ -1,4 +1,4 @@
-net: "train_val_64.prototxt"
+net: "train_val.prototxt"
 test_iter: 50
 test_interval: 200
 base_lr: 0.00001
@@ -11,5 +11,5 @@ max_iter:5000
 momentum: 0.9
 weight_decay: 0.0005
 snapshot: 30
-snapshot_prefix: "caffe_alexnet64_train"
+snapshot_prefix: "caffe_alexnet_train"
 solver_mode: CPU
