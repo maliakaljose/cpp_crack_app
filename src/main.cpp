@@ -65,8 +65,7 @@ int main(int argc, char *argv[]){
 
 			//Detecting edges using autocanny edge detector
 			bin = c1.auto_Canny(c1.grayImage);
-
-#if 0 //Commenting below debug code since imshow will not work.
+#if 0
 			if(DEBUG==1 || DEBUG==2){
                     imshow( "Source", c1.srcImage );
 					waitKey();
@@ -121,27 +120,17 @@ int main(int argc, char *argv[]){
 			}
 
 			if(cnn_mode==1){
-#if 0
-							imshow("Cnn Prediction" ,  final );
-							moveWindow("Cnn Prediction", 750,0);
-#else
-                                                        imwrite("cnn_mode_1.png", final); 
-#endif
+							imwrite(filename,  final );
+	//						moveWindow("Cnn Prediction", 750,0);
 			}
 			else if(cnn_mode==2){
-							imshow("Cnn Database creation" ,  final );
-							moveWindow("Cnn Database creation", 750,0);
+							imwrite(filename ,  final );
+							//moveWindow("Cnn Database creation", 750,0);
 			}
 			else if(cnn_mode==0){
-#if 0
-							imshow("Cnn Disabled" ,  final );
-							moveWindow("Cnn Disabled", 750,0);
-#else
-                                                        imwrite("cnn_mode_0.png", final); 
-#endif
+							imwrite(filename ,  final );
+							//moveWindow("Cnn Disabled", 750,0);
 			}
 				cout<<"Total Cracks :"<<c1.finalCracks.size()<<endl;
-#if 0
-			waitKey();
-#endif
+//			waitKey();
 }

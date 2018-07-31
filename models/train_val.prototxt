@@ -9,11 +9,11 @@ layer {
   }
   transform_param {
     mirror: true
-    mean_file: "C:\\Users\\anilreddy\\projects\\Crack_Detection\\Iter-2\\data\\Crack\\crack_mean.binaryproto"
+    mean_file: "/home/u16364/git_repo/cpp_crack_app/sdnet_models/crack_mean.binaryproto"
   }
   data_param {
-    source: "C:\\Users\\anilreddy\\projects\\Crack_Detection\\Iter-2\\examples\\Crack\\crack_train_lmdb"
-    batch_size: 256
+    source: "/home/u16364/git_repo/cpp_crack_app/sdnet_models/crack_train_lmdb"
+    batch_size: 64
     backend: LMDB
   }
 }
@@ -27,10 +27,10 @@ layer {
   }
   transform_param {
     mirror: false
-    mean_file: "C:\\Users\\anilreddy\\projects\\Crack_Detection\\Iter-2\\data\\Crack\\crack_mean.binaryproto"
+    mean_file: "/home/u16364/git_repo/cpp_crack_app/sdnet_models/crack_mean.binaryproto"
   }
   data_param {
-    source: "C:\\Users\\anilreddy\\projects\\Crack_Detection\\Iter-2\\examples\\Crack\\crack_val_lmdb"
+    source: "/home/u16364/git_repo/cpp_crack_app/sdnet_models/crack_val_lmdb"
     batch_size: 50
     backend: LMDB
   }
@@ -49,6 +49,7 @@ layer {
     decay_mult: 0
   }
   convolution_param {
+    engine: CAFFE
     num_output: 96
     kernel_size: 3
     stride: 1
@@ -93,6 +94,7 @@ layer {
     decay_mult: 0
   }
   convolution_param {
+    engine: CAFFE
     num_output: 256
     pad: 2
     kernel_size: 3

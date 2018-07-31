@@ -1,9 +1,8 @@
 #include "crack.hpp"
-string model_file   = "/home/u16364/cpp_crack_app/train_models/deploy_crack.prototxt";
-string trained_file = "/home/u16364/cpp_crack_app/train_models/caffe_alexnet64_train_iter_90.caffemodel";
-string mean_file    = "/home/u16364/cpp_crack_app/train_models/crack_mean.binaryproto";
-string label_file   = "/home/u16364/cpp_crack_app/train_models/labels.txt";
-
+string model_file   = "/home/u16364/git_repo/cpp_crack_app/sdnet_models/deploy_crack.prototxt";
+string trained_file = "/home/u16364/git_repo/cpp_crack_app/sdnet_models/caffe_alexnet64_train_iter_420.caffemodel";
+string mean_file    = "/home/u16364/git_repo/cpp_crack_app/sdnet_models/crack_mean.binaryproto";
+string label_file   = "/home/u16364/intel_app/models/labels.txt";
 /**
   * Detect the Contour in the binary Image
   *@param  bin - Input binary image

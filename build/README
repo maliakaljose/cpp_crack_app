@@ -1,3 +1,0 @@
-1.. To generate new Makefile run
------------------------------------
- cmake -DCMAKE_MODULE_PATH=$PWD .
